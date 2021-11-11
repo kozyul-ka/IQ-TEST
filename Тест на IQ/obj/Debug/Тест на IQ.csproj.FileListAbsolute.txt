@@ -18,3 +18,13 @@ H:\IQ_Test-master\Тест на IQ\obj\Debug\Тест на IQ.csproj.GenerateRes
 H:\IQ_Test-master\Тест на IQ\obj\Debug\Тест на IQ.csproj.CoreCompileInputs.cache
 H:\IQ_Test-master\Тест на IQ\obj\Debug\Тест на IQ.exe
 H:\IQ_Test-master\Тест на IQ\obj\Debug\Тест на IQ.pdb
+H:\testTestIQ\IQ_Test\Тест на IQ\bin\Debug\Тест на IQ.exe.config
+H:\testTestIQ\IQ_Test\Тест на IQ\bin\Debug\Тест на IQ.exe
+H:\testTestIQ\IQ_Test\Тест на IQ\bin\Debug\Тест на IQ.pdb
+H:\testTestIQ\IQ_Test\Тест на IQ\obj\Debug\Тест на IQ.csprojAssemblyReference.cache
+H:\testTestIQ\IQ_Test\Тест на IQ\obj\Debug\Тест_на_IQ.Form1.resources
+H:\testTestIQ\IQ_Test\Тест на IQ\obj\Debug\Тест_на_IQ.Properties.Resources.resources
+H:\testTestIQ\IQ_Test\Тест на IQ\obj\Debug\Тест на IQ.csproj.GenerateResource.cache
+H:\testTestIQ\IQ_Test\Тест на IQ\obj\Debug\Тест на IQ.csproj.CoreCompileInputs.cache
+H:\testTestIQ\IQ_Test\Тест на IQ\obj\Debug\Тест на IQ.exe
+H:\testTestIQ\IQ_Test\Тест на IQ\obj\Debug\Тест на IQ.pdb
