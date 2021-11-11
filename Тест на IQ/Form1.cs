@@ -14,13 +14,15 @@ namespace Тест_на_IQ
     {
         int n = 0;
         int[] answer;
+        int[] rightAnswer = { 1, 2, 3, 4, 5, 5 };
+
         public Form1()
         {
             InitializeComponent();
             answer = new int[6];
         }
 
-            
+
         private void Form1_Load(object sender, EventArgs e)
         {
             var picture1 = new Bitmap(Тест_на_IQ.Properties.Resources._1);
@@ -28,11 +30,11 @@ namespace Тест_на_IQ
         }
         public void show(int n)
         {
-            int n1 =n+1;
+            int n1 = n + 1;
             label1.Text = "Вопрос №" + n1;
             switch (answer[n])
             {
-               case 0:
+                case 0:
                     radioButton1.Checked = false;
                     radioButton2.Checked = false;
                     radioButton3.Checked = false;
@@ -104,30 +106,59 @@ namespace Тест_на_IQ
                     break;
                 case 2:
                     pictureBox1.BackgroundImage = new Bitmap(Тест_на_IQ.Properties.Resources._3);
+                    radioButton1.Visible = true;
+                    radioButton2.Visible = true;
+                    radioButton3.Visible = true;
+                    radioButton4.Visible = true;
                     radioButton5.Visible = true;
                     radioButton6.Visible = true;
+                    textBox1.Visible = false;
                     break;
                 case 3:
                     pictureBox1.BackgroundImage = new Bitmap(Тест_на_IQ.Properties.Resources._4);
-                    radioButton5.Visible = true;
-                    radioButton6.Visible = true;
+                    radioButton1.Visible = false;
+                    radioButton2.Visible = false;
+                    radioButton3.Visible = false;
+                    radioButton4.Visible = false;
+                    radioButton5.Visible = false;
+                    radioButton6.Visible = false;
+                    textBox1.Visible = true;
                     break;
                 case 4:
                     pictureBox1.BackgroundImage = new Bitmap(Тест_на_IQ.Properties.Resources._5);
+                    radioButton1.Visible = true;
+                    radioButton2.Visible = true;
+                    radioButton3.Visible = true;
+                    radioButton4.Visible = true;
                     radioButton5.Visible = true;
                     radioButton6.Visible = true;
+                    textBox1.Visible = false;
                     break;
                 case 5:
                     pictureBox1.BackgroundImage = new Bitmap(Тест_на_IQ.Properties.Resources._6);
                     radioButton5.Visible = true;
                     radioButton6.Visible = false;
                     break;
+            }
 
-
+            if (n == answer.Length - 1)
+            {
+                button2.Text = "Закончить тест";
+            }
+            else
+            {
+                button2.Text = "Вперед";
             }
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            if (n == 3)
+            {
+                if (textBox1.Text != "")
+                {
+                    saveTextBoxMessage(int.Parse(textBox1.Text));
+                }
+            }
             n--;
             if (n < 0)
             {
@@ -137,13 +168,50 @@ namespace Тест_на_IQ
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            n++;
-            if (n>5)
+            if (n == 3)
             {
-                n = 5;
-                
+                if (textBox1.Text != "")
+                {
+                    saveTextBoxMessage(int.Parse(textBox1.Text));
+                }
             }
-            show(n);
+            n++;
+            bool finish = false;
+            if (n > answer.Length - 1)
+            {
+                n = answer.Length - 1;
+                string questions = " ";
+                bool haveUnchecked = false;
+                for (int i = 0; i < answer.Length; i++)
+                {
+                    if (answer[i] == 0)
+                    {
+                        int a = i + 1;
+                        haveUnchecked = true;
+                        questions += "\n" + a.ToString();
+                    }
+                }
+                if (haveUnchecked)
+                {
+                    MessageBox.Show(
+                        "Ответьте на следующие вопросы:" + questions,
+                        "Сообщение",
+                        MessageBoxButtons.OK
+                        );
+                }
+                else
+                {
+                    finish = true;
+                }
+            }
+            if (finish)
+            {
+                finishTest();
+            }
+            else
+            {
+                show(n);
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -178,6 +246,80 @@ namespace Тест_на_IQ
         private void radioButton6_CheckedChanged(object sender, EventArgs e)
         {
             answer[n] = 6;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            char number = e.KeyChar;
+
+            if (!Char.IsDigit(number))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void saveTextBoxMessage(int message)
+        {
+            answer[n] = message;
+        }
+
+        private void finishTest()
+        {
+            double sumRightAns = 0;
+            for (int i = 0; i < answer.Length; i++)
+            {
+                if(answer[i] == rightAnswer[i])
+                {
+                    sumRightAns++;
+                }
+            }
+            double a = answer.Length;
+            double result = sumRightAns / (a / 100);
+            double iq = result * 1.6;
+            label2.Visible = true;
+            button1.Enabled = false;
+            button2.Enabled = false;
+            pictureBox1.Visible = false;
+            radioButton1.Visible = false;
+            radioButton2.Visible = false;
+            radioButton3.Visible = false;
+            radioButton4.Visible = false;
+            radioButton5.Visible = false;
+            radioButton6.Visible = false;
+            label2.Text = "Ваш IQ: \n"
+                + iq.ToString("00.")+"\n";
+            if(iq > 145)
+            {
+                label2.Text += "Еще чуть-чуть и вы Билл Гейтс";
+            }
+            else if(iq > 130 && iq <= 145)
+            {
+                label2.Text += "Вы конкурент В.В.Путину)";
+            }
+            else if (iq > 90 && iq <= 130)
+            {
+                label2.Text += "Вы среднестатистический россиянин";
+            }
+            else if(iq > 70 && iq  <= 90)
+            {
+                label2.Text += "Ваш интелект на уровне обезъяны";
+            }
+            else if(iq > 40 && iq <= 70)
+            {
+                label2.Text += "Похоже вы собака...";
+            }
+            else if (iq > 0 && iq <= 40)
+            {
+                label2.Text += "Ты - рыбка, и скоро это забудешь :)";
+            }
+
+
         }
     }
 }
