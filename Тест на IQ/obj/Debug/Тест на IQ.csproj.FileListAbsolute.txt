@@ -28,3 +28,14 @@ H:\testTestIQ\IQ_Test\Тест на IQ\obj\Debug\Тест на IQ.csproj.Generat
 H:\testTestIQ\IQ_Test\Тест на IQ\obj\Debug\Тест на IQ.csproj.CoreCompileInputs.cache
 H:\testTestIQ\IQ_Test\Тест на IQ\obj\Debug\Тест на IQ.exe
 H:\testTestIQ\IQ_Test\Тест на IQ\obj\Debug\Тест на IQ.pdb
+H:\IQ_Test-master (1)\IQ_Test-master\Тест на IQ\obj\Debug\Тест на IQ.csprojAssemblyReference.cache
+H:\IQ_Test-master (1)\IQ_Test-master\Тест на IQ\obj\Debug\Тест_на_IQ.Form1.resources
+H:\IQ_Test-master (1)\IQ_Test-master\Тест на IQ\obj\Debug\Тест_на_IQ.MainPage.resources
+H:\IQ_Test-master (1)\IQ_Test-master\Тест на IQ\obj\Debug\Тест_на_IQ.Properties.Resources.resources
+H:\IQ_Test-master (1)\IQ_Test-master\Тест на IQ\obj\Debug\Тест на IQ.csproj.GenerateResource.cache
+H:\IQ_Test-master (1)\IQ_Test-master\Тест на IQ\obj\Debug\Тест на IQ.csproj.CoreCompileInputs.cache
+H:\IQ_Test-master (1)\IQ_Test-master\Тест на IQ\obj\Debug\Тест на IQ.exe
+H:\IQ_Test-master (1)\IQ_Test-master\Тест на IQ\obj\Debug\Тест на IQ.pdb
+H:\IQ_Test-master (1)\IQ_Test-master\Тест на IQ\bin\Debug\Тест на IQ.exe.config
+H:\IQ_Test-master (1)\IQ_Test-master\Тест на IQ\bin\Debug\Тест на IQ.exe
+H:\IQ_Test-master (1)\IQ_Test-master\Тест на IQ\bin\Debug\Тест на IQ.pdb
