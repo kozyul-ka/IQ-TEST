@@ -25,8 +25,10 @@ namespace Тест_на_IQ
         {
             if (Nickname_textBox.Text != "")
             {
-                NickName = Nickname_textBox.Text;
+                NickName = Nickname_textBox.Text ;
                 Form1 Test = new Form1();
+                string path = @"C:\Users\polue\Downloads\IQ_Test-master (2)\IQ_Test-master\Тест на IQ\Results.txt";
+                System.IO.File.AppendAllText(path," "+NickName);
                 Test.Show();
                 Hide();
             }
@@ -43,6 +45,9 @@ namespace Тест_на_IQ
         private void button1_Click(object sender, EventArgs e)
         {
             Start();
+            //StreamWriter sw = new StreamWriter(@"C:\Users\polue\Downloads\IQ_Test-master (2)\IQ_Test-master\Тест на IQ\Results.txt", true, Encoding.ASCII);           
+            //sw.Write(" ", NickName);
+            //sw.Close();            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -57,14 +62,16 @@ namespace Тест_на_IQ
 
         private void btn_CheckResult_Click(object sender, EventArgs e)
         {
-            if (File.Exists(@"Data\Results.txt"))
+            string path = @"C:\Users\polue\Downloads\IQ_Test-master (2)\IQ_Test-master\Тест на IQ\Results.txt";
+            if (File.Exists(path))
             {
-                string[] message = File.ReadAllLines(@"Data\Results.txt");
+                string[] message = File.ReadAllLines(path);
                 string msg = "";
                 for (int i = 0; i < message.Length; i++)
                 {
                     msg += message[i];
                     msg += "\n";
+                    msg += NickName;
                 }
                 MessageBox.Show(
                             msg,

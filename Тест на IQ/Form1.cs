@@ -150,6 +150,11 @@ namespace Тест_на_IQ
                 button2.Text = "Вперед";
             }
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            Application.Exit();
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             if (n == 3)
