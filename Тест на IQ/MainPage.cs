@@ -48,18 +48,32 @@ namespace Тест_на_IQ
 
         private void btn_CheckResult_Click(object sender, EventArgs e)
         {
-            string[] message = File.ReadAllLines(@"Data\Results.txt");
-            string msg = "";
-            for(int i = 0; i < message.Length; i++)
+            if (!File.Exists(@"..\..\Data\Results.txt"))
             {
-                msg += message[i];
-                msg += "\n";
+                var f = File.Create(@"..\..\Data\Results.txt");
+                f.Close();
+                MessageBox.Show(
+                            "Файла с результатами не было \n" +
+                            "Файл с результатами был создан",
+                            "Результаты",
+                            MessageBoxButtons.OK
+                            );
             }
-            MessageBox.Show(
-                        msg,
-                        "Результаты",
-                        MessageBoxButtons.OK
-                        );
+            else
+            {
+                string[] message = File.ReadAllLines(@"..\..\Data\Results.txt");
+                string msg = "";
+                for (int i = 0; i < message.Length; i++)
+                {
+                    msg += message[i];
+                    msg += "\n";
+                }
+                MessageBox.Show(
+                            msg,
+                            "Результаты",
+                            MessageBoxButtons.OK
+                            );
+            }
         }
         private void textBox1_KeyPress(object sender, System.Windows.Forms.KeyEventArgs e)
         {
