@@ -42,6 +42,7 @@
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.taskText_label = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.radioButton8 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,7 +134,7 @@
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(247, 578);
+            this.radioButton5.Location = new System.Drawing.Point(167, 578);
             this.radioButton5.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(31, 17);
@@ -147,7 +148,7 @@
             // radioButton6
             // 
             this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(350, 578);
+            this.radioButton6.Location = new System.Drawing.Point(247, 578);
             this.radioButton6.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.Size = new System.Drawing.Size(31, 17);
@@ -184,7 +185,7 @@
             // radioButton7
             // 
             this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(437, 578);
+            this.radioButton7.Location = new System.Drawing.Point(349, 578);
             this.radioButton7.Name = "radioButton7";
             this.radioButton7.Size = new System.Drawing.Size(32, 17);
             this.radioButton7.TabIndex = 6;
@@ -214,11 +215,24 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // radioButton8
+            // 
+            this.radioButton8.AutoSize = true;
+            this.radioButton8.Location = new System.Drawing.Point(437, 578);
+            this.radioButton8.Name = "radioButton8";
+            this.radioButton8.Size = new System.Drawing.Size(32, 17);
+            this.radioButton8.TabIndex = 8;
+            this.radioButton8.TabStop = true;
+            this.radioButton8.Text = "B";
+            this.radioButton8.UseVisualStyleBackColor = true;
+            this.radioButton8.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(622, 616);
+            this.Controls.Add(this.radioButton8);
             this.Controls.Add(this.taskText_label);
             this.Controls.Add(this.radioButton7);
             this.Controls.Add(this.label2);
@@ -259,6 +273,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RadioButton radioButton7;
         private System.Windows.Forms.Label taskText_label;
+        private System.Windows.Forms.RadioButton radioButton8;
     }
 }
 
