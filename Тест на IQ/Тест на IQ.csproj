@@ -111,6 +111,12 @@
     <None Include="Resources\tests_iq_ru_01_0003_12.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\28.png" />
+    <None Include="Resources\18.png" />
+    <None Include="Resources\20.png" />
+    <None Include="Resources\26.png" />
+    <None Include="Resources\30.png" />
+    <None Include="Resources\7.png" />
     <Content Include="Results.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

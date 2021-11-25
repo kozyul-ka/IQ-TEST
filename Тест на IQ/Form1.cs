@@ -14,12 +14,12 @@ namespace Тест_на_IQ
     {
         int n = 0;
         int[] answer;
-        int[] rightAnswer = { 1, 2, 3, 4, 5, 5 };
+        int[] rightAnswer = { 1, 2, 2, 8, 4, 5 ,3,4,4,10,90,2};
 
         public Form1()
         {
             InitializeComponent();
-            answer = new int[6];
+            answer = new int[12];
         }
 
 
@@ -91,6 +91,7 @@ namespace Тест_на_IQ
                     radioButton5.Checked = false;
                     radioButton6.Checked = true;
                     break;
+
             }
             switch (n)
             {
@@ -139,6 +140,66 @@ namespace Тест_на_IQ
                     radioButton5.Visible = true;
                     radioButton6.Visible = false;
                     break;
+                case 6:
+                    pictureBox1.BackgroundImage = new Bitmap(Тест_на_IQ.Properties.Resources._7);
+                    radioButton1.Visible = true;
+                    radioButton2.Visible = true;
+                    radioButton3.Visible = true;
+                    radioButton4.Visible = true;
+                    radioButton5.Visible = false;
+                    radioButton6.Visible = false;
+                    textBox1.Visible = false;
+                    break;
+                case 7:
+                    pictureBox1.BackgroundImage = new Bitmap(Тест_на_IQ.Properties.Resources._8);
+                    radioButton1.Visible = false;
+                    radioButton2.Visible = false;
+                    radioButton3.Visible = false;
+                    radioButton4.Visible = false;
+                    radioButton5.Visible = false;
+                    radioButton6.Visible = false;
+                    textBox1.Visible = true;
+                    break;
+                case 8:
+                    pictureBox1.BackgroundImage = new Bitmap(Тест_на_IQ.Properties.Resources._9);
+                    radioButton1.Visible = false;
+                    radioButton2.Visible = false;
+                    radioButton3.Visible = false;
+                    radioButton4.Visible = false;
+                    radioButton5.Visible = false;
+                    radioButton6.Visible = false;
+                    textBox1.Visible = true;
+                    break;
+                case 9:
+                    pictureBox1.BackgroundImage = new Bitmap(Тест_на_IQ.Properties.Resources._10);
+                    radioButton1.Visible = false;
+                    radioButton2.Visible = false;
+                    radioButton3.Visible = false;
+                    radioButton4.Visible = false;
+                    radioButton5.Visible = false;
+                    radioButton6.Visible = false;
+                    textBox1.Visible = true;
+                    break;
+                case 10:
+                    pictureBox1.BackgroundImage = new Bitmap(Тест_на_IQ.Properties.Resources._11);
+                    radioButton1.Visible = false;
+                    radioButton2.Visible = false;
+                    radioButton3.Visible = false;
+                    radioButton4.Visible = false;
+                    radioButton5.Visible = false;
+                    radioButton6.Visible = false;
+                    textBox1.Visible = true;
+                    break;
+                case 11:
+                    pictureBox1.BackgroundImage = new Bitmap(Тест_на_IQ.Properties.Resources._12);
+                    radioButton1.Visible = true;
+                    radioButton2.Visible = true;
+                    radioButton3.Visible = true;
+                    radioButton4.Visible = true;
+                    radioButton5.Visible = true;
+                    radioButton6.Visible = true;
+                    textBox1.Visible = false;
+                    break;
             }
 
             if (n == answer.Length - 1)
@@ -157,11 +218,12 @@ namespace Тест_на_IQ
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (n == 3)
+            if (n == 3 || (n>5 && n<11 ))
             {
                 if (textBox1.Text != "")
                 {
                     saveTextBoxMessage(int.Parse(textBox1.Text));
+                    textBox1.Text="";
                 }
             }
             n--;
@@ -173,11 +235,12 @@ namespace Тест_на_IQ
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            if (n == 3)
+            if (n == 3 || (n > 5 && n < 11))
             {
                 if (textBox1.Text != "")
                 {
                     saveTextBoxMessage(int.Parse(textBox1.Text));
+                    textBox1.Text = "";
                 }
             }
             n++;
@@ -298,14 +361,17 @@ namespace Тест_на_IQ
             radioButton5.Visible = false;
             radioButton6.Visible = false;
             label2.Text = "Ваш IQ: \n"
+
                 + iq.ToString("00.")+"\n";
-            if(iq > 145)
+            string path = @"C:\Users\polue\Downloads\IQ_Test-master (2)\IQ_Test-master\Тест на IQ\Results.txt";
+            System.IO.File.AppendAllText(path, " "+ DateTime.Now +" Ваш IQ:"+ iq );
+            if (iq > 145)
             {
                 label2.Text += "Еще чуть-чуть и вы Билл Гейтс";
             }
             else if(iq > 130 && iq <= 145)
             {
-                label2.Text += "Вы конкурент В.В.Путину)";
+                label2.Text += "Ваш IQ как у Джессики Альбы";
             }
             else if (iq > 90 && iq <= 130)
             {
@@ -313,11 +379,11 @@ namespace Тест_на_IQ
             }
             else if(iq > 70 && iq  <= 90)
             {
-                label2.Text += "Ваш интелект на уровне обезъяны";
+                label2.Text += "Ваш интелект как у Сильвестрф Сталлоне ";
             }
             else if(iq > 40 && iq <= 70)
             {
-                label2.Text += "Похоже вы собака...";
+                label2.Text += "Позанимайтесь ещё)";
             }
             else if (iq > 0 && iq <= 40)
             {
