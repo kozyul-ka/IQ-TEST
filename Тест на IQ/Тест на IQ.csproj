@@ -114,6 +114,12 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Data\Results.txt" />
+    <None Include="Resources\30.png" />
+    <None Include="Resources\28.png" />
+    <None Include="Resources\20.png" />
+    <None Include="Resources\26.png" />
+    <None Include="Resources\18.png" />
+    <None Include="Resources\7.png" />
     <None Include="Resources\Vopros-18-e1506365890499.jpeg" />
     <None Include="Resources\Vopros-11.jpeg" />
     <None Include="Resources\Vopros-10.jpeg" />

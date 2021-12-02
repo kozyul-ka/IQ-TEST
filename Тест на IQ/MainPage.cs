@@ -23,10 +23,12 @@ namespace Тест_на_IQ
 
         private void Start()
         {
-            if (Nickname_textBox.Text != "")
+            if(Nickname_textBox.Text != "")
             {
                 NickName = Nickname_textBox.Text;
                 Form1 Test = new Form1();
+                string path = @"..\..\Data\Results.txt";
+                System.IO.File.AppendAllText(path, " " + NickName);
                 Test.Show();
                 Hide();
             }
@@ -48,25 +50,16 @@ namespace Тест_на_IQ
 
         private void btn_CheckResult_Click(object sender, EventArgs e)
         {
-            if (!File.Exists(@"..\..\Data\Results.txt"))
+            string path = @"..\..\Data\Results.txt";
+            if (File.Exists(path))
             {
-                var f = File.Create(@"..\..\Data\Results.txt");
-                f.Close();
-                MessageBox.Show(
-                            "Файла с результатами не было \n" +
-                            "Файл с результатами был создан",
-                            "Результаты",
-                            MessageBoxButtons.OK
-                            );
-            }
-            else
-            {
-                string[] message = File.ReadAllLines(@"..\..\Data\Results.txt");
+                string[] message = File.ReadAllLines(path);
                 string msg = "";
                 for (int i = 0; i < message.Length; i++)
                 {
                     msg += message[i];
                     msg += "\n";
+                    msg += NickName;
                 }
                 MessageBox.Show(
                             msg,
@@ -74,6 +67,40 @@ namespace Тест_на_IQ
                             MessageBoxButtons.OK
                             );
             }
+            else
+            {
+                MessageBox.Show(
+                               "Файла с результатами еще нет",
+                               "Результаты",
+                               MessageBoxButtons.OK
+                               );
+            }
+            //if (!File.Exists(@"..\..\Data\Results.txt"))
+            //{
+            //    var f = File.Create(@"..\..\Data\Results.txt");
+            //    f.Close();
+            //    MessageBox.Show(
+            //                "Файла с результатами не было \n" +
+            //                "Файл с результатами был создан",
+            //                "Результаты",
+            //                MessageBoxButtons.OK
+            //                );
+            //}
+            //else
+            //{
+            //    string[] message = File.ReadAllLines(@"..\..\Data\Results.txt");
+            //    string msg = "";
+            //    for (int i = 0; i < message.Length; i++)
+            //    {
+            //        msg += message[i];
+            //        msg += "\n";
+            //    }
+            //    MessageBox.Show(
+            //                msg,
+            //                "Результаты",
+            //                MessageBoxButtons.OK
+            //                );
+            //}
         }
         private void textBox1_KeyPress(object sender, System.Windows.Forms.KeyEventArgs e)
         {

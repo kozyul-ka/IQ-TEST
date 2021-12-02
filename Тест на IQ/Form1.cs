@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -17,8 +18,6 @@ namespace Тест_на_IQ
         int n = 0;
         int[] answer;
         int[] rightAnswer;
-
-        //добавление новых заданий (не switch'ем, как было раньше) --Ю
         Task[] TaskArray =
         {   
             //Номер изображения;Текст задания; Текст Радиокнопок; Включать ли текстбокс; Номер правильного ответа
@@ -26,12 +25,12 @@ namespace Тест_на_IQ
             //0 - нет изображения; "" - нет описания задания; 
             //если у нас есть текстбокс, то строка со значениями радиокнопок должна быть пустой;
 
-            new Task(1, "", "123456", false, 1),
-            new Task(2, "", "123456", false, 2),
-            new Task(3, "", "123456", false, 3),
-            new Task(4, "", "", true, 4),
-            new Task(5, "", "123456", false, 5),
-            new Task(6, "", "123456", false, 6), //тут ответы чисто для галочки, нужно написать правильные
+            new Task(1, "Выберите недостающую фигуру", "123456", false, 1),
+            new Task(2, "Выберите недостающую фигуру", "123456", false, 2),
+            new Task(3, "Выберите недостающую фигуру", "123456", false, 2),
+            new Task(4, "Какое число пропущенно?", "", true, 8),
+            new Task(5, "Выберите недостающую фигуру", "123456", false, 4),
+            new Task(6, "Выберите недостающую фигуру", "12345", false, 5 ), 
 
             //дальше ответы верные, 12 вопросов от --Ю
             new Task(7, "Найдите ячейку с другим оттенком красного.", "123456", false, 3), 
@@ -47,6 +46,16 @@ namespace Тест_на_IQ
             new Task(0, "Вставьте недостающую букву: \n\n Д Ж К Н С __", "ВДЩФКТ", false, 4),
             new Task(15, "Какая из шести пронумерованных фигур должна занять свободное место?", "123456", false, 3),
             new Task(0, "Количество букв слове УтКа?", "", true, 4),
+            
+            //
+
+            new Task(16, "", "1234", false, 4 ),
+            new Task(17, "Вставьте недостающую букву: \n\n Д Ж К Н С __", "	УЯНАЫ", false, 2),// ДОДЕЛАТЬ ответ
+            new Task(18, "Вставьте недостающую цифру ", "", true, 4),
+            new Task(19, "Вставьте недостающую цифру ", "", true, 10),
+            new Task(20, "Вставьте недостающую цифру ", "", true, 90),
+            new Task(21, "Выберите недостающую фигуру", "123456", false, 6 ),
+           // new Task(0, "Сколько красных автомобилей в день производит автозавод?Автозавод производит 1000 кузовов в день для белых, черных, зеленых и красныхавтомобилей в пропорции  3 : 9 : 8 : 5  соответственно.", "200 190 210 250 320", false, 1)
         };
 
         RadioButton[] radioButtons;
@@ -185,23 +194,20 @@ namespace Тест_на_IQ
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            show(0);
+            Show(0);
         }
 
-        protected override void OnFormClosing(FormClosingEventArgs e) //закрытие всего приложения по крестику формы --Ю
+        protected override void OnFormClosing(FormClosingEventArgs e) 
         {
             base.OnFormClosing(e);
             Application.Exit();
         }
 
-        public void show(int n)
+        public void Show(int n)
         {
-            //отображение Номера вопроса --Ю
             int n1 = n + 1;
             label1.Text = "Вопрос №" + n1;
-
             CreatePageTask(n); //создаем сранички с заданиями --Ю
-
             //В последнем вопросе меняем текст кнопки "Вперед" на "Завершить тест"  --Ю
             if (n == answer.Length - 1)         
             {
@@ -227,7 +233,7 @@ namespace Тест_на_IQ
             {
                 n = 0;
             }
-            show(n);
+            Show(n);
         }
 
         //Клик по кнопке Вперед
@@ -278,7 +284,7 @@ namespace Тест_на_IQ
             }
             else
             {
-                show(n);
+                Show(n);
             }
         }
 
@@ -340,6 +346,11 @@ namespace Тест_на_IQ
             double iq = result * 1.6;
 
             //Вывод результатов
+            String sndc = Application.StartupPath + @"\Results.txt";
+            string path = @"..\..\Data\Results.txt";
+            System.IO.File.AppendAllText(path, " " + DateTime.Now + " Ваш IQ:" + iq + "\n \n");
+            
+           
             label2.Text = "Ваш IQ: \n"
                 + iq.ToString("00.")+"\n";
             if(iq > 145)
@@ -348,19 +359,19 @@ namespace Тест_на_IQ
             }
             else if(iq > 130 && iq <= 145)
             {
-                label2.Text += "Вы конкурент В.В.Путину)";
+                label2.Text += "Ваш IQ как у Арнольда Шварценеггера или Мадонны)";
             }
             else if (iq > 90 && iq <= 130)
             {
-                label2.Text += "Вы среднестатистический россиянин";
+                label2.Text += "Ваш IQ как у Аллы Пугачевой";
             }
             else if(iq > 70 && iq  <= 90)
             {
-                label2.Text += "Ваш интелект на уровне обезъяны";
+                label2.Text += "Ваш IQ как у Пэрис Хилтон";
             }
             else if(iq > 40 && iq <= 70)
             {
-                label2.Text += "Похоже вы собака...";
+                label2.Text += "Позанимайтесь ещё)";
             }
             else if (iq > 0 && iq <= 40)
             {
