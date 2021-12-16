@@ -109,6 +109,15 @@ namespace Тест_на_IQ
                 Start();
             }
         }
-        
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
