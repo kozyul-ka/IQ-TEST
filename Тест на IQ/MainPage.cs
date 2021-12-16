@@ -28,6 +28,12 @@ namespace Тест_на_IQ
                 NickName = Nickname_textBox.Text;
                 Form1 Test = new Form1();
                 string path = @"..\..\Data\Results.txt";
+                List<string> lines = System.IO.File.ReadAllLines(path).ToList();
+                if (lines[lines.Count-1] != "")
+                {
+                    System.IO.File.WriteAllLines(path, lines.GetRange(0, lines.Count - 1).ToArray());
+                    System.IO.File.AppendAllText(path, "\n");
+                }
                 System.IO.File.AppendAllText(path, " " + NickName);
                 Test.Show();
                 Hide();
@@ -53,6 +59,12 @@ namespace Тест_на_IQ
             string path = @"..\..\Data\Results.txt";
             if (File.Exists(path))
             {
+                List<string> lines = System.IO.File.ReadAllLines(path).ToList();
+                if (lines[lines.Count - 1] != "")
+                {
+                    System.IO.File.WriteAllLines(path, lines.GetRange(0, lines.Count - 1).ToArray());
+                    System.IO.File.AppendAllText(path, "\n");
+                }
                 string[] message = File.ReadAllLines(path);
                 string msg = "";
                 for (int i = 0; i < message.Length; i++)
