@@ -106,6 +106,7 @@ namespace Тест_на_IQ
             {
                 rightAnswer[i] = TaskArray[i].rightAnswers;
             }
+            textBox1.MaxLength = 4;
         }
 
         public void SortImages(List<int> VV, List<int> VV1) //функция сортировки изображений --Ю
@@ -312,6 +313,7 @@ namespace Тест_на_IQ
             {
                 e.Handled = false;
             }
+            
         }   
 
         private void saveTextBoxMessage(int message) //запись ручного ввода ответа в текстбокс
