@@ -28,35 +28,37 @@ namespace Тест_на_IQ
             new Task(1, "Выберите недостающую фигуру", "1234", false, 1),
             new Task(2, "Выберите недостающую фигуру", "123456", false, 2),
             new Task(3, "Выберите недостающую фигуру", "123456", false, 2),
-            new Task(4, "Какое число пропущенно?", "", true, 8),
-            new Task(5, "Выберите недостающую фигуру", "123456", false, 4),
-            new Task(6, "Выберите недостающую фигуру", "12345", false, 5 ), 
+            //new Task(4, "Какое число пропущенно?", "", true, 8),
+            //new Task(5, "Выберите недостающую фигуру", "123456", false, 4),
+            //new Task(6, "Выберите недостающую фигуру", "12345", false, 5 ), 
 
-            //дальше ответы верные, 12 вопросов от --Ю
-            new Task(7, "Найдите ячейку с другим оттенком красного.", "123456", false, 3), 
-            new Task(8, "Продолжите ряд…", "ФКАВЛ", false, 4), 
-            new Task(9, "Найдите логику и выберите верный вариант", "0123", false, 2), 
-            new Task(10, "Какая из этих черных фигур полностью соответствует красной фигуре?", "ABCDEFG", false, 2), 
-            new Task(0, "Вставьте пропущенную цифру. \n \n2 5 8 11 _", "", true, 14),
-            new Task(0, "Вставьте недостающую цифру. \n \n2   5   7 \n \n4   7   5 \n\n3   6   _", "", true, 6),
-            new Task(11, "Какая из шести пронумерованных фигур должна занять свободное место?", "123456", false, 5),
-            new Task(12, "Какая из шести пронумерованных фигур должна занять свободное место?", "123456", false, 3),
-            new Task(13, "Вставьте недостающую цифру.", "", true, 32),
-            new Task(14, "Выберите лишнюю фигуру.", "12345", false, 5),
-            new Task(0, "Вставьте недостающую букву: \n\n Д Ж К Н С __", "ВДЩФКТ", false, 4),
-            new Task(15, "Какая из шести пронумерованных фигур должна занять свободное место?", "123456", false, 3),
-            new Task(0, "Количество букв слове УтКа?", "", true, 4),
+            ////дальше ответы верные, 12 вопросов от --Ю
+            //new Task(7, "Найдите ячейку с другим оттенком красного.", "123456", false, 3),
+            //new Task(8, "Продолжите ряд…", "ФКАВЛ", false, 4),
+            //new Task(9, "Найдите логику и выберите верный вариант", "0123", false, 2),
+            //new Task(10, "Какая из этих черных фигур полностью соответствует красной фигуре?", "ABCDEFG", false, 2),
+            //new Task(0, "Вставьте пропущенную цифру. \n \n2 5 8 11 _", "", true, 14),
+            //new Task(0, "Вставьте недостающую цифру. \n \n2   5   7 \n \n4   7   5 \n\n3   6   _", "", true, 6),
+            //new Task(11, "Какая из шести пронумерованных фигур должна занять свободное место?", "123456", false, 5),
+            //new Task(12, "Какая из шести пронумерованных фигур должна занять свободное место?", "123456", false, 3),
+            //new Task(13, "Вставьте недостающую цифру.", "", true, 32),
+            //new Task(14, "Выберите лишнюю фигуру.", "12345", false, 5),
+            //new Task(0, "Вставьте недостающую букву: \n\n Д Ж К Н С __", "ВДЩФКТ", false, 4),
+            //new Task(15, "Какая из шести пронумерованных фигур должна занять свободное место?", "123456", false, 3),
+            //new Task(0, "Количество букв слове УтКа?", "", true, 4),
             
-            //
+            ////
 
-            new Task(16, "", "1234", false, 4 ),
-            new Task(17, "Вставьте недостающую букву: ", "АУЯНАЫ", false, 2),// ДОДЕЛАТЬ ответ
-            new Task(18, "Вставьте недостающую цифру ", "", true, 4),
-            new Task(19, "Вставьте недостающую цифру ", "", true, 10),
-            new Task(20, "Вставьте недостающую цифру ", "", true, 90),
-            new Task(21, "Выберите недостающую фигуру", "123456", false, 6 ),
+            //new Task(16, "", "1234", false, 4 ),
+            //new Task(17, "Вставьте недостающую букву: ", "АУЯНАЫ", false, 2),// ДОДЕЛАТЬ ответ
+            //new Task(18, "Вставьте недостающую цифру ", "", true, 4),
+            //new Task(19, "Вставьте недостающую цифру ", "", true, 10),
+            //new Task(20, "Вставьте недостающую цифру ", "", true, 90),
+            //new Task(21, "Выберите недостающую фигуру", "123456", false, 6 ),
            // new Task(0, "Сколько красных автомобилей в день производит автозавод?Автозавод производит 1000 кузовов в день для белых, черных, зеленых и красныхавтомобилей в пропорции  3 : 9 : 8 : 5  соответственно.", "200 190 210 250 320", false, 1)
         };
+
+       
 
         RadioButton[] radioButtons;
         TextBox[] TB;
@@ -65,7 +67,8 @@ namespace Тест_на_IQ
         public Form1()
         {
             InitializeComponent();
-
+            MaximizeBox = false;
+            MinimizeBox = false;
             answer = new int[TaskArray.Length];
             radioButtons = this.Controls.OfType<RadioButton>().ToArray();
             TB = this.Controls.OfType<TextBox>().ToArray();
@@ -328,9 +331,18 @@ namespace Тест_на_IQ
             ClearLabel();
             HideElements();
             label2.Visible = true;
+            label1.Visible = false;
             button1.Enabled = false;
             button2.Enabled = false;
+            button1.Visible = false;
+            button2.Visible = false;
             pictureBox1.Visible = false;
+            btnMain.Visible = true;
+            btnRes.Visible = true;
+            btnExit.Visible = true;
+            btnMain.Enabled = true;
+            btnRes.Enabled = true;
+            btnExit.Enabled = true;
 
             double sumRightAns = 0;
 
@@ -350,7 +362,7 @@ namespace Тест_на_IQ
             //Вывод результатов
             String sndc = Application.StartupPath + @"\Results.txt";
             string path = @"..\..\Data\Results.txt";
-            System.IO.File.AppendAllText(path, " " + DateTime.Now + " Ваш IQ:" + iq + "\n \n");
+            System.IO.File.AppendAllText(path, " " + DateTime.Now + " Ваш IQ:" + iq + "\n\n");
             
            
             label2.Text = "Ваш IQ: \n"
@@ -385,5 +397,49 @@ namespace Тест_на_IQ
             taskText_label.Text = "";
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string path = @"..\..\Data\Results.txt";
+            if (File.Exists(path))
+            {
+                List<string> lines = System.IO.File.ReadAllLines(path).ToList();
+                if (lines[lines.Count - 1] != "")
+                {
+                    System.IO.File.WriteAllLines(path, lines.GetRange(0, lines.Count - 1).ToArray());
+                }
+                string[] message = File.ReadAllLines(path);
+                string msg = "";
+                for (int i = 0; i < message.Length; i++)
+                {
+                    msg += message[i];
+                    msg += "\n";
+                }
+                MessageBox.Show(
+                            msg,
+                            "Результаты",
+                            MessageBoxButtons.OK
+                            );
+            }
+            else
+            {
+                MessageBox.Show(
+                               "Файла с результатами еще нет",
+                               "Результаты",
+                               MessageBoxButtons.OK
+                               );
+            }
+        }
+
+        private void btnMain_Click(object sender, EventArgs e)
+        {
+            MainPage mnPg = new MainPage();
+            mnPg.Show();
+            Hide();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }  
 }

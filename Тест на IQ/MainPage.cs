@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Drawing.Drawing2D;
 
 namespace Тест_на_IQ
 {
@@ -32,9 +33,8 @@ namespace Тест_на_IQ
                 if (lines[lines.Count-1] != "")
                 {
                     System.IO.File.WriteAllLines(path, lines.GetRange(0, lines.Count - 1).ToArray());
-                    System.IO.File.AppendAllText(path, "\n");
                 }
-                System.IO.File.AppendAllText(path, " " + NickName);
+                System.IO.File.AppendAllText(path, NickName);
                 Test.Show();
                 Hide();
             }
@@ -53,6 +53,11 @@ namespace Тест_на_IQ
             Start();
         }
 
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            Application.Exit();
+        }
 
         private void btn_CheckResult_Click(object sender, EventArgs e)
         {
@@ -63,7 +68,6 @@ namespace Тест_на_IQ
                 if (lines[lines.Count - 1] != "")
                 {
                     System.IO.File.WriteAllLines(path, lines.GetRange(0, lines.Count - 1).ToArray());
-                    System.IO.File.AppendAllText(path, "\n");
                 }
                 string[] message = File.ReadAllLines(path);
                 string msg = "";
@@ -71,7 +75,6 @@ namespace Тест_на_IQ
                 {
                     msg += message[i];
                     msg += "\n";
-                    msg += NickName;
                 }
                 MessageBox.Show(
                             msg,
@@ -87,32 +90,6 @@ namespace Тест_на_IQ
                                MessageBoxButtons.OK
                                );
             }
-            //if (!File.Exists(@"..\..\Data\Results.txt"))
-            //{
-            //    var f = File.Create(@"..\..\Data\Results.txt");
-            //    f.Close();
-            //    MessageBox.Show(
-            //                "Файла с результатами не было \n" +
-            //                "Файл с результатами был создан",
-            //                "Результаты",
-            //                MessageBoxButtons.OK
-            //                );
-            //}
-            //else
-            //{
-            //    string[] message = File.ReadAllLines(@"..\..\Data\Results.txt");
-            //    string msg = "";
-            //    for (int i = 0; i < message.Length; i++)
-            //    {
-            //        msg += message[i];
-            //        msg += "\n";
-            //    }
-            //    MessageBox.Show(
-            //                msg,
-            //                "Результаты",
-            //                MessageBoxButtons.OK
-            //                );
-            //}
         }
         private void textBox1_KeyPress(object sender, System.Windows.Forms.KeyEventArgs e)
         {
@@ -128,6 +105,32 @@ namespace Тест_на_IQ
         }
 
         private void MainPage_Load(object sender, EventArgs e)
+        {
+            MaximizeBox = false;
+            MinimizeBox = false;
+        }
+
+        private void btn_CheckResult_MouseEnter(object sender, EventArgs e)
+        {
+            this.btn_CheckResult.BackgroundImage = global::Тест_на_IQ.Properties.Resources.btnResHover;
+        }
+
+        private void btn_CheckResult_MouseLeave(object sender, EventArgs e)
+        {
+            this.btn_CheckResult.BackgroundImage = global::Тест_на_IQ.Properties.Resources.btnRes;
+        }
+
+        private void btn_Start_MouseEnter(object sender, EventArgs e)
+        {
+            this.btn_Start.BackgroundImage = global::Тест_на_IQ.Properties.Resources.btnBeginHover;
+        }
+
+        private void btn_Start_MouseLeave(object sender, EventArgs e)
+        {
+            this.btn_Start.BackgroundImage = global::Тест_на_IQ.Properties.Resources.btnBegin;
+        }
+
+        private void MainPage_DoubleClick(object sender, EventArgs e)
         {
 
         }
