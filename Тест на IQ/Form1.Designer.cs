@@ -54,10 +54,10 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton1.Location = new System.Drawing.Point(167, 544);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton1.Location = new System.Drawing.Point(223, 670);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(31, 17);
+            this.radioButton1.Size = new System.Drawing.Size(37, 21);
             this.radioButton1.TabIndex = 2;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "1";
@@ -68,10 +68,10 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton2.Location = new System.Drawing.Point(247, 544);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton2.Location = new System.Drawing.Point(329, 670);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(31, 17);
+            this.radioButton2.Size = new System.Drawing.Size(37, 21);
             this.radioButton2.TabIndex = 2;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "2";
@@ -82,10 +82,10 @@
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton3.Location = new System.Drawing.Point(350, 544);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton3.Location = new System.Drawing.Point(467, 670);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(31, 17);
+            this.radioButton3.Size = new System.Drawing.Size(37, 21);
             this.radioButton3.TabIndex = 2;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "3";
@@ -96,10 +96,10 @@
             // 
             this.radioButton4.AutoSize = true;
             this.radioButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton4.Location = new System.Drawing.Point(437, 544);
-            this.radioButton4.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton4.Location = new System.Drawing.Point(583, 670);
+            this.radioButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(31, 17);
+            this.radioButton4.Size = new System.Drawing.Size(37, 21);
             this.radioButton4.TabIndex = 2;
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "4";
@@ -109,12 +109,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(123)))), ((int)(((byte)(118)))));
-            this.label1.Location = new System.Drawing.Point(224, 481);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(299, 592);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 39);
+            this.label1.Size = new System.Drawing.Size(247, 46);
             this.label1.TabIndex = 3;
             this.label1.Text = "Вопрос № 1";
             // 
@@ -122,10 +121,10 @@
             // 
             this.radioButton5.AutoSize = true;
             this.radioButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton5.Location = new System.Drawing.Point(167, 578);
-            this.radioButton5.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton5.Location = new System.Drawing.Point(223, 711);
+            this.radioButton5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(31, 17);
+            this.radioButton5.Size = new System.Drawing.Size(37, 21);
             this.radioButton5.TabIndex = 2;
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "5";
@@ -137,10 +136,10 @@
             // 
             this.radioButton6.AutoSize = true;
             this.radioButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton6.Location = new System.Drawing.Point(247, 578);
-            this.radioButton6.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton6.Location = new System.Drawing.Point(329, 711);
+            this.radioButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(31, 17);
+            this.radioButton6.Size = new System.Drawing.Size(37, 21);
             this.radioButton6.TabIndex = 2;
             this.radioButton6.TabStop = true;
             this.radioButton6.Text = "6";
@@ -153,10 +152,11 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(261, 543);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.Location = new System.Drawing.Point(348, 668);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
+            this.textBox1.Size = new System.Drawing.Size(132, 29);
             this.textBox1.TabIndex = 4;
             this.textBox1.Visible = false;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
@@ -164,10 +164,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(39, 53);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(52, 65);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 33);
+            this.label2.Size = new System.Drawing.Size(109, 39);
             this.label2.TabIndex = 5;
             this.label2.Text = "label2";
             this.label2.Visible = false;
@@ -176,9 +177,10 @@
             // 
             this.radioButton7.AutoSize = true;
             this.radioButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton7.Location = new System.Drawing.Point(349, 578);
+            this.radioButton7.Location = new System.Drawing.Point(465, 711);
+            this.radioButton7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(32, 17);
+            this.radioButton7.Size = new System.Drawing.Size(38, 21);
             this.radioButton7.TabIndex = 6;
             this.radioButton7.TabStop = true;
             this.radioButton7.Text = "B";
@@ -190,18 +192,20 @@
             // 
             this.taskText_label.AutoSize = true;
             this.taskText_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.taskText_label.Location = new System.Drawing.Point(33, 25);
+            this.taskText_label.Location = new System.Drawing.Point(44, 31);
+            this.taskText_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.taskText_label.Name = "taskText_label";
-            this.taskText_label.Size = new System.Drawing.Size(0, 20);
+            this.taskText_label.Size = new System.Drawing.Size(0, 25);
             this.taskText_label.TabIndex = 7;
             // 
             // radioButton8
             // 
             this.radioButton8.AutoSize = true;
             this.radioButton8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton8.Location = new System.Drawing.Point(437, 578);
+            this.radioButton8.Location = new System.Drawing.Point(583, 711);
+            this.radioButton8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(32, 17);
+            this.radioButton8.Size = new System.Drawing.Size(38, 21);
             this.radioButton8.TabIndex = 8;
             this.radioButton8.TabStop = true;
             this.radioButton8.Text = "B";
@@ -216,12 +220,12 @@
             this.btnExit.Enabled = false;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnExit.Location = new System.Drawing.Point(248, 531);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Location = new System.Drawing.Point(331, 654);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(113, 46);
+            this.btnExit.Size = new System.Drawing.Size(151, 57);
             this.btnExit.TabIndex = 11;
             this.btnExit.Text = "Выйти";
             this.btnExit.UseCompatibleTextRendering = true;
@@ -237,12 +241,12 @@
             this.btnMain.Enabled = false;
             this.btnMain.FlatAppearance.BorderSize = 0;
             this.btnMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMain.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnMain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(123)))), ((int)(((byte)(118)))));
-            this.btnMain.Location = new System.Drawing.Point(30, 531);
-            this.btnMain.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMain.Location = new System.Drawing.Point(40, 654);
+            this.btnMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMain.Name = "btnMain";
-            this.btnMain.Size = new System.Drawing.Size(113, 46);
+            this.btnMain.Size = new System.Drawing.Size(151, 57);
             this.btnMain.TabIndex = 10;
             this.btnMain.Text = "На главную";
             this.btnMain.UseVisualStyleBackColor = false;
@@ -258,12 +262,12 @@
             this.btnRes.Enabled = false;
             this.btnRes.FlatAppearance.BorderSize = 0;
             this.btnRes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRes.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnRes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRes.Location = new System.Drawing.Point(489, 531);
-            this.btnRes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRes.Location = new System.Drawing.Point(652, 654);
+            this.btnRes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRes.Name = "btnRes";
-            this.btnRes.Size = new System.Drawing.Size(113, 46);
+            this.btnRes.Size = new System.Drawing.Size(151, 57);
             this.btnRes.TabIndex = 9;
             this.btnRes.Text = "Результаты";
             this.btnRes.UseVisualStyleBackColor = false;
@@ -274,10 +278,10 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.ImageLocation = "";
-            this.pictureBox1.Location = new System.Drawing.Point(29, 53);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(39, 65);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(571, 407);
+            this.pictureBox1.Size = new System.Drawing.Size(761, 501);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -289,12 +293,12 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(489, 474);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(652, 583);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 46);
+            this.button2.Size = new System.Drawing.Size(151, 57);
             this.button2.TabIndex = 0;
             this.button2.Text = "Вперед";
             this.button2.UseVisualStyleBackColor = false;
@@ -307,12 +311,12 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(123)))), ((int)(((byte)(118)))));
-            this.button1.Location = new System.Drawing.Point(30, 474);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(40, 583);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 46);
+            this.button1.Size = new System.Drawing.Size(151, 57);
             this.button1.TabIndex = 0;
             this.button1.Text = "Назад";
             this.button1.UseVisualStyleBackColor = false;
@@ -320,9 +324,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 616);
+            this.ClientSize = new System.Drawing.Size(829, 758);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnMain);
             this.Controls.Add(this.btnRes);
@@ -342,8 +346,11 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximumSize = new System.Drawing.Size(847, 805);
+            this.MinimumSize = new System.Drawing.Size(847, 805);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

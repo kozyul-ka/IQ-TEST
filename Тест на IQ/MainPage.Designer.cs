@@ -158,7 +158,7 @@ namespace Тест_на_IQ
             this.MaximumSize = new System.Drawing.Size(830, 745);
             this.MinimumSize = new System.Drawing.Size(830, 745);
             this.Name = "MainPage";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainPage";
             this.Load += new System.EventHandler(this.MainPage_Load);
             this.DoubleClick += new System.EventHandler(this.MainPage_DoubleClick);
