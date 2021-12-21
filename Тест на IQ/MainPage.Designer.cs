@@ -44,7 +44,7 @@ namespace Тест_на_IQ
             // 
             this.Nickname_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Nickname_textBox.Location = new System.Drawing.Point(53, 486);
-            this.Nickname_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Nickname_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.Nickname_textBox.Name = "Nickname_textBox";
             this.Nickname_textBox.Size = new System.Drawing.Size(271, 34);
             this.Nickname_textBox.TabIndex = 2;
@@ -97,7 +97,7 @@ namespace Тест_на_IQ
             this.btn_CheckResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btn_CheckResult.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_CheckResult.Location = new System.Drawing.Point(441, 553);
-            this.btn_CheckResult.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_CheckResult.Margin = new System.Windows.Forms.Padding(4);
             this.btn_CheckResult.Name = "btn_CheckResult";
             this.btn_CheckResult.Size = new System.Drawing.Size(341, 130);
             this.btn_CheckResult.TabIndex = 1;
@@ -119,7 +119,7 @@ namespace Тест_на_IQ
             this.btn_Start.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btn_Start.ForeColor = System.Drawing.Color.White;
             this.btn_Start.Location = new System.Drawing.Point(33, 553);
-            this.btn_Start.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Start.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Start.Name = "btn_Start";
             this.btn_Start.Size = new System.Drawing.Size(344, 130);
             this.btn_Start.TabIndex = 0;
@@ -133,7 +133,7 @@ namespace Тест_на_IQ
             this.pictureBox1.ImageLocation = "../.../Resources/brain.png";
             this.pictureBox1.InitialImage = global::Тест_на_IQ.Properties.Resources.brain;
             this.pictureBox1.Location = new System.Drawing.Point(403, 55);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(369, 375);
             this.pictureBox1.TabIndex = 5;
@@ -154,8 +154,11 @@ namespace Тест_на_IQ
             this.Controls.Add(this.btn_Start);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(830, 745);
+            this.MinimumSize = new System.Drawing.Size(830, 745);
             this.Name = "MainPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "MainPage";
             this.Load += new System.EventHandler(this.MainPage_Load);
             this.DoubleClick += new System.EventHandler(this.MainPage_DoubleClick);
